@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
-import {filmsActions} from './actions'
-import {filmsMutations} from './mutations'
-import {filmsGetter} from './getters'
+import {filmsActions,userActions} from './actions'
+import {filmsMutations, userMutations} from './mutations'
+import {filmsGetter,userGetter,userGetters} from './getters'
 
 Vue.use(Vuex)
 
@@ -11,7 +11,8 @@ export default new Vuex.Store({
   strict: true,
   user: {
     loggedIn: false,
-    accountType: 'USER'
+    accountType: 'USER',
+    name: ''
   },
   state: {
     users: [],
@@ -19,7 +20,7 @@ export default new Vuex.Store({
     films: []
 //    languages: []
   },
-  getters: Object.assign({}, filmsGetter),
-  actions: Object.assign({}, filmsActions),
-  mutations: Object.assign({}, filmsMutations)
+  getters: Object.assign({}, filmsGetter,userGetters,userGetter),
+  actions: Object.assign({}, filmsActions,userActions),
+  mutations: Object.assign({}, filmsMutations,userMutations)
 })
