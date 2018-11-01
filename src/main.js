@@ -3,11 +3,8 @@
 
 import Vue from 'vue';
 import App from './App.vue';
-import films from './pages/Films'
-import Message from './HellowWorld.vue';
-import Vuex from 'vuex';
 import store from './store/store';
-
+import router from './router/index';
 
 
 new Vue({
@@ -15,6 +12,6 @@ new Vue({
   template: '<App/>',
   components: { App },
   store,
-  'app-films': films,
+  router,
   render: h => h(App)
 });

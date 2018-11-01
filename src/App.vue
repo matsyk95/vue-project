@@ -5,12 +5,15 @@
 </template>
 
 <script>
-
+import Film from './pages/Films'
 export default {
   data () {
     return {
     }
   },
+  components: {
+      'app-films': Film,
+    },
 }
 </script>
 

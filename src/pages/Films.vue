@@ -8,34 +8,29 @@
 </template>
 
 <script>
-
+import Vue from 'vue'
   export default {
     name: 'Films',
-    data() {
+    data () {
       return {
         length: ''
       }
     },
     methods: {
-      updateOptions(options) {
+      updateOptions (options) {
         this.options = options;
       }
     },
     computed: {
-      films() {
+      films () {
         return this.$store.getters.allFilms;
       },
     },
 
-    created(){
-      if (this.films.length ===0) {
+    created () {
+      if (this.films.length === 0) {
         this.$store.dispatch('allFilms');
       }
-    },
-/*
-    components: {
-      'films-list': FilmList
-//!--  'films-options': FilmsOptions -->
-    }*/
+    }
   }
 </script>

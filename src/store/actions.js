@@ -1,5 +1,5 @@
 import { API_BASE } from '../config';
-
+import Vue from 'vue';
 export const filmsActions = {
   allFilms ({commit}) {
     Vue.http.get(`${API_BASE}/films/`).then((response) => {

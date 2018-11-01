@@ -1,17 +1,18 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
 import Vuex from 'vuex'
-import FilmsRoutes from './films'
+import Films from './Films'
+import VueResource from 'vue-resource';
 Vue.use(Router)
-
+Vue.use(VueResource);
+Vue.use(Vuex);
 export default new Router({
 
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
+      name: 'Films',
+      component: Films,
 
     }
   ]
