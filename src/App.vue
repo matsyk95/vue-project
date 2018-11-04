@@ -1,11 +1,18 @@
 <template>
   <div id="app">
-    <app-films></app-films>
+       <app-films></app-films>
+    <div class="ml-auto">
+        <div calss="logowanie">Logowanie</div>
+<!--    </div>
+     <div id="loginModal" centered size="lg" hide-footer title="Zaloguj się">
+        <login-form></login-form>-->
+      </div>
   </div>
 </template>
 
 <script>
 import Film from './pages/Films'
+import LoginForm from '@/components/LoginForm';
 export default {
   data () {
     return {
@@ -13,7 +20,16 @@ export default {
   },
   components: {
       'app-films': Film,
+ //     'login-form': LoginForm
     },
+  computed: {
+  user() {
+    return this.$store.getters.user;
+  },
+  userLoggedIn() {
+    return this.$store.getters.user.loggedIn;
+  },
+},
 }
 </script>
 
