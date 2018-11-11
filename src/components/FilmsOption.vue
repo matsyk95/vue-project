@@ -12,7 +12,7 @@
 </template>
 
 <script>
-  export default {
-    name: 'FilmsOptions'
-  };
+export default {
+  name: 'FilmsOptions'
+}
 </script>

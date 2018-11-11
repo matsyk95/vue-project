@@ -10,18 +10,18 @@
 </template>
 
 <script>
-    export default {
-        computed: {
-          users() {
-              return this.$store.getters.unregisteredUsers;
-          }
-        },
-        methods: {
-            registerUser(user) {
-                this.$store.dispatch('register', user.id);
-            }
-        }
+export default {
+  computed: {
+    users () {
+      return this.$store.getters.unregisteredUsers
     }
+  },
+  methods: {
+    registerUser (user) {
+      this.$store.dispatch('register', user.id)
+    }
+  }
+}
 </script>
 
 <style scoped>

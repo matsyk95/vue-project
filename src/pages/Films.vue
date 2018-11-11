@@ -8,29 +8,29 @@
 </template>
 
 <script>
-import Vue from 'vue'
-  export default {
-    name: 'Films',
-    data () {
-      return {
-        length: ''
-      }
-    },
-    methods: {
-      updateOptions (options) {
-        this.options = options;
-      }
-    },
-    computed: {
-      films () {
-        return this.$store.getters.allFilms;
-      },
-    },
 
-    created () {
-      if (this.films.length === 0) {
-        this.$store.dispatch('allFilms');
-      }
+export default {
+  name: 'Films',
+  data () {
+    return {
+      length: ''
+    }
+  },
+  methods: {
+    updateOptions (options) {
+      this.options = options
+    }
+  },
+  computed: {
+    films () {
+      return this.$store.getters.allFilms
+    }
+  },
+
+  created () {
+    if (this.films.length === 0) {
+      this.$store.dispatch('allFilms')
     }
   }
+}
 </script>

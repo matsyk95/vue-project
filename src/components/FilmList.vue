@@ -12,10 +12,6 @@
 </template>
 
 <script>
-  export default {
-    name: 'FilmsList',
-    props: ['Films.vue']
-  };
 </script>
 
 <style>
