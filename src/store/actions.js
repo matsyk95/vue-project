@@ -8,7 +8,7 @@ import {
 
 export const filmsActions = {
   allFilms ({commit}) {
-    Vue.http.get(`${API_BASE}/films`).then((response) => {
+    Vue.http.get(`${API_BASE}/films/?format=json`).then((response) => {
       if (response.status === 200) {
         commit(ALL_FILMS, response.data)
       }
