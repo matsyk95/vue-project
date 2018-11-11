@@ -12,24 +12,24 @@
 
 <script>
 import Film from './pages/Films'
-import LoginForm from '@/components/LoginForm';
+
 export default {
   data () {
     return {
     }
   },
   components: {
-      'app-films': Film,
- //     'login-form': LoginForm
-    },
+    'app-films': Film
+    //     'login-form': LoginForm
+  },
   computed: {
-  user() {
-    return this.$store.getters.user;
-  },
-  userLoggedIn() {
-    return this.$store.getters.user.loggedIn;
-  },
-},
+    user () {
+      return this.$store.getters.user
+    },
+    userLoggedIn () {
+      return this.$store.getters.user.loggedIn
+    }
+  }
 }
 </script>
 

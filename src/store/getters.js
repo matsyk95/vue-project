@@ -1,11 +1,11 @@
 export const filmsGetter = {
-  allFilms: state => state.films,
-};
+  allFilms: state => state.films
+}
 
-//users
+// users
 export const userGetter = {
-  user: state => state.user,
-};
+  user: state => state.user
+}
 export const userGetters = {
-  allUsers: state => state.users,
-};
+  allUsers: state => state.users
+}
